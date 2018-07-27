@@ -51,6 +51,76 @@ class Testing{
 			System.out.println("Element is not present with the given id : " + loc_id);
 		}
 		
+		// Find element using NAME locator
+		String loc_name = "user_v1[query]";
+		WebElement elementByName = FindElement(driver, By.name(loc_name), 4);
+		
+		if(elementByName != null) {
+			System.out.println("Element is present with the given name : " + loc_name);
+		} else {
+			System.out.println("Element is not present with the given name : " + loc_name);
+		}
+		
+		// Find element using XPATH locator
+		String loc_xpath = "//*[@id='homeSearchBar']";
+		WebElement elementByXpath = FindElement(driver, By.xpath(loc_xpath), 4);
+		
+		if(elementByXpath != null) {
+			System.out.println("Element is present with the given xpath : " + loc_xpath);
+		} else {
+			System.out.println("Element is not present with the given xpath : " + loc_xpath);
+		}
+		
+		// Find element using CSS locator
+		String loc_css = "#homeSearchBar";
+		WebElement elementByCss = FindElement(driver, By.cssSelector(loc_css), 4);
+		
+		if(elementByCss != null) {
+			System.out.println("Element is present with the given css selector : " + loc_css);
+		} else {
+			System.out.println("Element is not present with the given css selector : " + loc_css);
+		}
+		
+		// Find element using ClassName locator
+		String loc_class = "search_input";
+		WebElement elementByClass = FindElement(driver, By.className(loc_class), 4);
+		
+		if(elementByClass != null) {
+			System.out.println("Element is present with the given class name : " + loc_class);
+		} else {
+			System.out.println("Element is not present with the given class name : " + loc_class);
+		}
+		
+		// Find element using TagName locator
+		String loc_tag = "button";
+		WebElement elementByTag = FindElement(driver, By.tagName(loc_tag), 4);
+		
+		if(elementByTag != null) {
+			System.out.println("Element is present with the given tag name : " + loc_tag);
+		} else {
+			System.out.println("Element is not present with the given tag name : " + loc_tag);
+		}
+		
+		// Find element using LinkText locator
+		String loc_link = "Log In";
+		WebElement elementByLink = FindElement(driver, By.linkText(loc_link), 4);
+		
+		if(elementByLink != null) {
+			System.out.println("Element is present with the given link text : " + loc_link);
+		} else {
+			System.out.println("Element is not present with the given link text : " + loc_link);
+		}
+		
+		// Find element using Partial Link Text locator
+		String loc_partial = "Log";
+		WebElement elementByPartial = FindElement(driver, By.partialLinkText(loc_partial), 4);
+		
+		if(elementByPartial != null) {
+			System.out.println("Element is present with the given partial link text : " + loc_partial);
+		} else {
+			System.out.println("Element is not present with the given partial link text : " + loc_partial);
+		}
+		
 		closeBrowser(driver);
 	}
 	
